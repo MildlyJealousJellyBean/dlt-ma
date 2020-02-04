@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">QuizApp</string>
     <string name="center_text">Hello TJ!</string>
-    <string name="hint_text">What\'s your name?</string>
+    <string name="hint1_text">What\'s your name?</string>
     <string name="click_button">Submit</string>
+    <string name="hint2_text">What grade are you in?</string>
 </resources>
