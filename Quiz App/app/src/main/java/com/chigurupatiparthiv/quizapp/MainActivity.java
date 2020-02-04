@@ -26,14 +26,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 System.out.println("Button was clicked");
                 Log.i("testButton", "This is Log.i (information)");
-                displayText.setText(String.format("%s %s", displayText.getText(), responseText.getText()));
+//                displayText.setText(String.format("%s %s", displayText.getText(), responseText.getText()));
             }
         });
         responseText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if(!hasFocus) {
-                    if(responseText.getText().toString().equals(""))
+                    if(responseText.getText().toString().equals(getString(R.string.name_match))) {
+                        displayText.setText(R.string.name_match_message);
+                    }
+                }
+                else {
+                    displayText.setText(R.string.center_text);
+                    responseText.setText("");
+                    responseText.setHint(R.string.hint1_text);
                 }
             }
         });

@@ -4,4 +4,6 @@
     <string name="hint1_text">What\'s your name?</string>
     <string name="click_button">Submit</string>
     <string name="hint2_text">What grade are you in?</string>
+    <string name="name_match">Parthiv</string>
+    <string name="name_match_message">He created this form!</string>
 </resources>
