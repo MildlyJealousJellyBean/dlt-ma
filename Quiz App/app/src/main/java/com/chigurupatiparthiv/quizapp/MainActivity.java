@@ -58,10 +58,9 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                changeActionBarTitle(R.string.app_name.toString());
+                changeActionBarTitle(getString(R.string.app_name));
             }
         }, 3000);
-
     }
 
     public void changeActionBarTitle(String title) {
