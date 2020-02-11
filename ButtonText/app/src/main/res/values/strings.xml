@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ButtonText</string>
+    <string name="name_button">Submit</string>
+    <string name="name_text">Your name will go here</string>
+    <string name="name_hint_text">Your Name</string>
+    <string name="message_button">Cycle Message</string>
+    <string name="message_text">This needs to be replaced with an array</string>
 </resources>
