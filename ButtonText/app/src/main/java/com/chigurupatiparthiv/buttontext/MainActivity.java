@@ -3,8 +3,13 @@ package com.chigurupatiparthiv.buttontext;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    EditText responseEditText;
+    TextView nameText;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,22 +19,6 @@ public class MainActivity extends AppCompatActivity {
 }
 
 /*
-package com.chigurupatiparthiv.quizapp;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import java.text.DateFormat;
-import java.util.Date;
-
 public class MainActivity extends AppCompatActivity {
     EditText responseText;
     EditText gradeInt;
