@@ -43,29 +43,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    @SuppressLint("SetTextI18n")
-    public void submitAction(View view) {
-        DateFormat dateFormat = DateFormat.getDateTimeInstance();
-        String nameText = responseText.getText().toString().trim();
-        String gradeText = gradeInt.getText().toString().trim();
-        Log.i("responseText", nameText);
-        int gradeInt = Log.i("gradeInt", gradeText);
-        Log.i("clickTime", String.format("%s\n", dateFormat.format(new Date())));
-        if(nameText.equals("")) {
-            nameText = "User";
-        }
-        changeActionBarTitle(String.format("Hello %s!", nameText));
-        displayText.setText(getString(R.string.center_text) + " " + Integer.toString(++incrementValue));
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                changeActionBarTitle(getString(R.string.app_name));
-            }
-        }, 3000);
-    }
-
-    public void changeActionBarTitle(String title) {
-        setTitle(title);
-    }
 }

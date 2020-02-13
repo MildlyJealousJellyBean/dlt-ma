@@ -2,77 +2,56 @@ package com.chigurupatiparthiv.buttontext;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText responseEditText;
     TextView nameText;
-    
+    TextView messageText;
+    String[] messages;
+    int messageArrayLength;
+    int arrayIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-}
-
-/*
-public class MainActivity extends AppCompatActivity {
-    EditText responseText;
-    EditText gradeInt;
-    TextView displayText;
-    int incrementValue;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        responseText = findViewById(R.id.responseEditText);
-        gradeInt = findViewById(R.id.response2EditText);
-        displayText = findViewById(R.id.textBox);
-        responseText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(!hasFocus) {
-                    if(responseText.getText().toString().equals(getString(R.string.name_match))) {
-                        displayText.setText(R.string.name_match_message);
-                    }
-                }
-                else {
-                    displayText.setText(R.string.center_text);
-                    responseText.setText("");
-                    responseText.setHint(R.string.hint1_text);
-                }
-            }
-        });
+        responseEditText = findViewById(R.id.responseEditText);
+        nameText = findViewById(R.id.nameView);
+        messageText = findViewById(R.id.messageView);
+        Resources res = getResources();
+        messages = res.getStringArray(R.array.messages);
+        messageArrayLength = messages.length;
     }
 
-    @SuppressLint("SetTextI18n")
-    public void submitAction(View view) {
-        DateFormat dateFormat = DateFormat.getDateTimeInstance();
-        String nameText = responseText.getText().toString().trim();
-        String gradeText = gradeInt.getText().toString().trim();
-        Log.i("responseText", nameText);
-        int gradeInt = Log.i("gradeInt", gradeText);
-        Log.i("clickTime", String.format("%s\n", dateFormat.format(new Date())));
-        if(nameText.equals("")) {
-            nameText = "User";
+    public void changeName(View view) {
+        String name = responseEditText.getText().toString().trim();
+        Log.i("Response Text", name);
+        if(name.equals("")) {
+            name = "User";
         }
-        changeActionBarTitle(String.format("Hello %s!", nameText));
-        displayText.setText(getString(R.string.center_text) + " " + Integer.toString(++incrementValue));
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                changeActionBarTitle(getString(R.string.app_name));
-            }
-        }, 3000);
+        nameText.setText(String.format("Hello %s!", name));
     }
 
-    public void changeActionBarTitle(String title) {
-        setTitle(title);
+    public void changeMessage(View view) {
+        String name = responseEditText.getText().toString().trim();
+        Log.i("Response Text", name);
+        if (name.equals("")) {
+            name = "User";
+        }
+        messageText.setText(String.format(messages[arrayIndex], name));
+        updateIndex();
+    }
+
+    public void updateIndex() {
+        arrayIndex++;
+        if (arrayIndex == messageArrayLength) {
+            arrayIndex = 0;
+        }
     }
 }
-
- */

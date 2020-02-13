@@ -5,4 +5,9 @@
     <string name="name_hint_text">Your Name</string>
     <string name="message_button">Cycle Message</string>
     <string name="message_text">This needs to be replaced with an array</string>
+    <string-array name="messages">
+        <item>Hi %1$s!</item>
+        <item>Hello %1$s!</item>
+        <item>Have a nice day %1$s!</item>
+    </string-array>
 </resources>
