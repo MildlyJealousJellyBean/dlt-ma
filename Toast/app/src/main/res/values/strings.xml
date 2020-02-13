@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Toast</string>
+    <string name="topRight">Top Right Text View</string>
+    <string name="topLeft">Top Left Text View</string>
+    <string name="bottomRight">Bottom Right Text View</string>
+    <string name="bottomLeft">Bottom Left Text View</string>
 </resources>
