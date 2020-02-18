@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         nameText.setText(String.format("Hello %s!", name));
     }
 
-    public void changeMessage(View view) {
+    public void changeMessage(View view) {x
         String name = responseEditText.getText().toString().trim();
         Log.i("Response Text", name);
         if (name.equals("")) {
