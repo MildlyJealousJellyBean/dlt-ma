@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
             "Bottom Right TextView Clicked!\nTotal Clicks: %d"};
     String[] intID = new String[]{"topLeft", "topRight", "bottomLeft", "bottomRight"};
     SharedPreferences mPreferences;
+    SeekBar simpleSeekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         for (int index = 0; index < 4; index++) {
             textViewCounters[index] = mPreferences.getInt(intID[index], 0);
         }
+        simpleSeekBar = (SeekBar)findViewById()
     }
 
     public void showToast(View view) {
