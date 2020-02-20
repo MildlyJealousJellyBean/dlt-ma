@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Views</string>
+    <string name="first_button">First Display</string>
+    <string name="second_button">Second Display</string>
+    <string name="third_button">Third Display</string>
+    <string name="fourth_button">Fourth Display</string>
+    <string name="fifth_button">Fifth Display</string>
+    <string name="sixth_button">Sixth Display</string>
+    <string name="seventh_button">Seventh Display</string>
+    <string name="firstDisplay">First Display</string>
+    <string name="secondDisplay">Second Display</string>
+    <string name="secondDisplay">Second Display</string>
+    <string name="thirdDisplay">Third Display</string>
+    <string name="fourthDisplay">Fourth Display</string>
 </resources>
