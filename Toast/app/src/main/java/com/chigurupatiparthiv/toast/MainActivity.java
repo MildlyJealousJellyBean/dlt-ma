@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -28,7 +29,35 @@ public class MainActivity extends AppCompatActivity {
         for (int index = 0; index < 4; index++) {
             textViewCounters[index] = mPreferences.getInt(intID[index], 0);
         }
-        simpleSeekBar = (SeekBar)findViewById()
+        simpleSeekBar = findViewById(R.id.simpleSeekBar);
+        simpleSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+            int progressChangedValue = mPreferences.getInt("seekBar", 0);
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressChangedValue = progress;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                preferencesEditor.putInt("seekBar", progressChangedValue);
+                preferencesEditor.apply();
+                TextView changeTextSize = findViewById(R.id.topLeft);
+                changeTextSize.setTextSize(TypedValue.COMPLEX_UNIT_PT, progressChangedValue);
+                changeTextSize = findViewById(R.id.topRight);
+                changeTextSize.setTextSize(TypedValue.COMPLEX_UNIT_PT, progressChangedValue);
+                changeTextSize = findViewById(R.id.bottomRight);
+                changeTextSize.setTextSize(TypedValue.COMPLEX_UNIT_PT, progressChangedValue);
+                changeTextSize = findViewById(R.id.bottomLeft);
+                changeTextSize.setTextSize(TypedValue.COMPLEX_UNIT_PT, progressChangedValue);
+                Toast.makeText(MainActivity.this, "Font Size: " + progressChangedValue, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void showToast(View view) {

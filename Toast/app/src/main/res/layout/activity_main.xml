@@ -46,9 +46,14 @@
         android:id="@+id/simpleSeekBar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:max="20"
-        android:progress="10"
-        tools:layout_editor_absoluteY="150dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginTop="204dp"
+        android:layout_marginBottom="471dp"
+        android:max="10"
+        app:layout_constraintBottom_toTopOf="@+id/bottomRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topRight"
+        tools:ignore="MissingConstraints,UnusedAttribute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
