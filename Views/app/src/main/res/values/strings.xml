@@ -9,7 +9,9 @@
     <string name="seventh_button">Seventh Display</string>
     <string name="firstDisplay">First Display</string>
     <string name="secondDisplay">Second Display</string>
-    <string name="secondDisplay">Second Display</string>
     <string name="thirdDisplay">Third Display</string>
     <string name="fourthDisplay">Fourth Display</string>
+    <string name="fifthDisplay">Fifth Display</string>
+    <string name="sixthDisplay">Sixth Display</string>
+    <string name="seventhDisplay">Seventh Display</string>
 </resources>
