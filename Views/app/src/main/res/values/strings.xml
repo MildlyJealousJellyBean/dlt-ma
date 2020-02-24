@@ -14,4 +14,5 @@
     <string name="fifthDisplay">Fifth Display</string>
     <string name="sixthDisplay">Sixth Display</string>
     <string name="seventhDisplay">Seventh Display</string>
+    <string name="switcherText">View Switcher Screen</string>
 </resources>

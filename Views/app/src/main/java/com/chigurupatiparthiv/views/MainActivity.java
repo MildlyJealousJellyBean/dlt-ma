@@ -2,16 +2,52 @@ package com.chigurupatiparthiv.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+    Class[] screenNames = new Class[]{FirstDisplay.class, SecondDisplay.class, ThirdDisplay.class, FourthDisplay.class, FifthDisplay.class, SixthDisplay.class, SeventhDisplay.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.switcherText);
+    }
+
+    public void changeDisplay(View view) {
+        int index = -1;
+        switch (view.getId()) {
+            case (R.id.goTo1):
+                index = 0;
+                break;
+            case (R.id.goTo2):
+                index = 1;
+                break;
+            case (R.id.goTo3):
+                index = 2;
+                break;
+            case (R.id.goTo4):
+                index = 3;
+                break;
+            case (R.id.goTo5):
+                index = 4;
+                break;
+            case (R.id.goTo6):
+                index = 5;
+                break;
+            case (R.id.goTo7):
+                index = 6;
+                break;
+        }
+        Intent nextScreen = new Intent(getApplicationContext(), screenNames[index]);
+        Log.i("Index", Integer.toString(index));
+        startActivity(nextScreen);
     }
 }
 
