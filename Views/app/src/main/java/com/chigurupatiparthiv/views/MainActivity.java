@@ -1,17 +1,15 @@
 package com.chigurupatiparthiv.views;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import java.util.Objects;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     Class[] screenNames = new Class[]{FirstDisplay.class, SecondDisplay.class, ThirdDisplay.class, FourthDisplay.class, FifthDisplay.class, SixthDisplay.class, SeventhDisplay.class};
+    int lastIndex = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 index = 6;
                 break;
         }
+        lastIndex = index;
         Intent nextScreen = new Intent(getApplicationContext(), screenNames[index]);
         Log.i("Index", Integer.toString(index));
         startActivity(nextScreen);
@@ -142,5 +141,4 @@ public class MainActivity extends AppCompatActivity {
         preferencesEditor.apply();
     }
 }
-
  */
