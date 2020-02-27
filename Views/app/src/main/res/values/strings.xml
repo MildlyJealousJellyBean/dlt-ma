@@ -16,4 +16,5 @@
     <string name="seventhDisplay">Seventh Display</string>
     <string name="switcherText">View Switcher Screen</string>
     <string name="go_back">Go Back</string>
+    <string name="topMiddleButtonText">Button</string>
 </resources>

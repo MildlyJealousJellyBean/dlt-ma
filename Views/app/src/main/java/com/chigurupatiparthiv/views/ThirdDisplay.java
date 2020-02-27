@@ -13,6 +13,8 @@ public class ThirdDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third_display);
         findViewById(R.id.bottomMiddle).setBackgroundColor(Color.GRAY);
+        findViewById(R.id.middleMiddle).setBackgroundColor(Color.GRAY);
+        findViewById(R.id.topMiddle).setBackgroundColor(Color.GRAY);
     }
 
     public void goBack(View view) {
