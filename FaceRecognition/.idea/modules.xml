@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FaceRecognition.iml" filepath="$PROJECT_DIR$/FaceRecognition.iml" group="FaceRecognition" />
+      <module fileurl="file://$PROJECT_DIR$/app/FaceRecognition-app.iml" filepath="$PROJECT_DIR$/app/FaceRecognition-app.iml" group="FaceRecognition/app" />
       <module fileurl="file://$PROJECT_DIR$/Keye.iml" filepath="$PROJECT_DIR$/Keye.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
