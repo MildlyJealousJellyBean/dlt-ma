@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".AddPeopleActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <EditText
+        android:id="@+id/NAME_ID"
+        android:layout_below="@id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"/>
+
+    <Button
+        android:id="@+id/RECORD_NAME_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/NAME_ID"
+        android:text="Record" />
+
+    <Button
+        android:id="@+id/IMAGE_PICK_BUTTON_ID"
+        android:layout_below="@id/NAME_ID"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/RECORD_NAME_ID"
+        android:layout_marginEnd="2dp"
+        android:text="Choose Images" />
+
+    <TextView
+        android:id="@+id/RECORD_BUTTON_STATUS_ID"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="161dp"
+        android:text="No audio label recorded yet" />
+
+    <TextView
+        android:id="@+id/IMAGE_PICKER_STATUS_ID"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="81dp"
+        android:text="No images selected" />
+
+    <Button
+        android:id="@+id/SUBMIT_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="137dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/PLAY_NAME_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NAME_ID"
+        android:layout_toEndOf="@+id/RECORD_NAME_ID"
+        android:text="Play" />
+
+</RelativeLayout>

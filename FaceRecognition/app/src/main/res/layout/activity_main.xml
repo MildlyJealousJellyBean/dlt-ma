@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.keye.karthiksubraveti.keye.MainActivity">
+
+    <TextView
+        android:id="@+id/OUTPUT_TEXT_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:labelFor="@id/texture"
+        android:text="@string/imagePreview"
+        android:textStyle="bold" />
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/BACKEND_STATUS_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/addPeopleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:labelFor="@id/ADD_PEOPLE_LAYOUT_ID"
+        android:text="@string/add_training_data"
+        android:textStyle="bold" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/ADD_PEOPLE_LAYOUT_ID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/NAME_ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textPersonName" />
+
+
+        <Button
+            android:id="@+id/RECORD_NAME_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/NAME_ID"
+            android:drawableRight="@android:drawable/ic_notification_overlay"
+            android:text="@string/record" />
+
+        <Button
+            android:id="@+id/PLAY_NAME_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NAME_ID"
+            android:layout_toEndOf="@+id/RECORD_NAME_ID"
+            android:drawableRight="@android:drawable/ic_media_play"
+            android:text="@string/play" />
+
+
+        <Button
+            android:id="@+id/IMAGE_PICK_BUTTON_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/RECORD_NAME_ID"
+            android:layout_below="@id/NAME_ID"
+            android:drawableRight="@android:drawable/ic_menu_gallery"
+            android:text="@string/choose_images" />
+
+        <TextView
+            android:id="@+id/RECORD_BUTTON_STATUS_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RECORD_NAME_ID"
+            android:layout_alignParentStart="true"
+            android:text="@string/no_audio_label_recorded_yet" />
+
+        <TextView
+            android:id="@+id/IMAGE_PICKER_STATUS_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RECORD_BUTTON_STATUS_ID"
+            android:layout_alignParentStart="true"
+            android:text="@string/no_images_selected" />
+
+        <Button
+            android:id="@+id/SUBMIT_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:drawableRight="@android:drawable/ic_menu_send"
+            android:text="@string/submit" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
