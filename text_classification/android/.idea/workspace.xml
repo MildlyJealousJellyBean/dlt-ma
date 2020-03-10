@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c966333a-fb81-4b52-9eb0-8c4dcb76aca2" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/icons8-google-mobile-512.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Tensorflow Examples" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tensorflow Examples" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
