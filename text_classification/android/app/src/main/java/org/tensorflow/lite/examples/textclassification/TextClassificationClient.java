@@ -115,7 +115,6 @@ public class TextClassificationClient {
       return resultString.trim();
     }
   }
-  ;
 
   public TextClassificationClient(Context context) {
     this.context = context;
@@ -197,8 +196,6 @@ public class TextClassificationClient {
     // Return the probability of each class.
     return results;
   }
-
-
 
   /** Load TF Lite model from assets. */
   private static MappedByteBuffer loadModelFile(AssetManager assetManager) throws IOException {

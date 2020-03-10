@@ -93,16 +93,15 @@ public class MainActivity extends AppCompatActivity {
     // Run on UI thread as we'll updating our app UI
     runOnUiThread(
         () -> {
-          String textToShow = "Input: " + inputText + "\nOutput:\n";
+          StringBuilder textToShow = new StringBuilder("Input: " + inputText + "\nOutput:\n");
           for (int i = 0; i < results.size(); i++) {
             Result result = results.get(i);
-            textToShow +=
-                String.format("    %s: %s\n", result.getTitle(), result.getConfidence());
+            textToShow.append(String.format("    %s: %s\n", result.getTitle(), result.getConfidence()));
           }
-          textToShow += "---------\n";
+          textToShow.append("---------\n");
 
           // Append the result to the UI.
-          resultTextView.append(textToShow);
+          resultTextView.append(textToShow.toString());
 
           // Clear the input text.
           inputEditText.getText().clear();
