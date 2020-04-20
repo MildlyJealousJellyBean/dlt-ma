@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ActivityLifecycle</string>
+    <string name="topRight">Top Right Text View</string>
+    <string name="topLeft">Top Left Text View</string>
+    <string name="bottomRight">Bottom Right Text View</string>
+    <string name="bottomLeft">Bottom Left Text View</string>
+    <string name="columnHeaders">Current\t\tLifetime</string>
+    <string name="resetCounters">Reset Counters</string>
+    <string-array name="counters">
+        <item>On Create\t\t\t%1$s\t\t\t\t\t\t%2$s\t\t\t\t\t\t\t\t\t\t\t\t\t</item>
+        <item>On Start\t\t\t\t\t%1$s\t\t\t\t\t\t%2$s\t\t\t\t\t\t\t\t\t\t\t\t\t</item>
+        <item>On Resume\t\t%1$s\t\t\t\t\t\t%2$s\t\t\t\t\t\t\t\t\t\t\t\t\t</item>
+        <item>On Pause\t\t\t\t%1$s\t\t\t\t\t\t%2$s\t\t\t\t\t\t\t\t\t\t\t\t\t</item>
+        <item>On Stop\t\t\t\t\t%1$s\t\t\t\t\t\t%2$s\t\t\t\t\t\t\t\t\t\t\t\t\t</item>
+        <item>On Restart\t\t\t%1$s\t\t\t\t\t\t%2$s\t\t\t\t\t\t\t\t\t\t\t\t\t</item>
+        <item>On Destroy\t\t%1$s\t\t\t\t\t\t%2$s\t\t\t\t\t\t\t\t\t\t\t\t\t</item>
+    </string-array>
+</resources>

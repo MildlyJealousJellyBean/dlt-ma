@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Response Text", name);
         if (name.equals("")) {
             name = "User";
-        }
         messageText.setText(String.format(messages[arrayIndex], name));
         updateIndex();
     }
