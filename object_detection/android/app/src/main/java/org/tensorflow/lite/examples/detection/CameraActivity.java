@@ -52,7 +52,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.nio.ByteBuffer;
-import java.security.Timestamp;
+import java.sql.Timestamp;
+
 
 import org.tensorflow.lite.examples.detection.env.ImageUtils;
 import org.tensorflow.lite.examples.detection.env.Logger;
@@ -84,7 +85,6 @@ public abstract class CameraActivity extends AppCompatActivity
 
   protected TextView frameValueTextView, cropValueTextView, inferenceTimeTextView;
   protected ImageView bottomSheetArrowImageView;
-  private SwitchCompat apiSwitchCompat;
   private TextView threadsTextView;
 
   @Override
@@ -101,14 +101,15 @@ public abstract class CameraActivity extends AppCompatActivity
       requestPermission();
     }
 
-    GsonBuilder gsonBuilder = new GsonBuilder();  // Implementing GSON to store timestamps of app launches and recognitions (as I don't have a particularly useful case for GSON)
-    gsonBuilder.registerTypeAdapter(Timestamp.class, new TimestampDeserializer());
-    Gson Gson = gsonBuilder.create();
+    String[] dateFormat = {"yyyy-MM-dd'T'HH:mm:ssZ"};
+    GsonBuilder gsonBuilder = new GsonBuilder();
+    gsonBuilder.setDateFormat(dateFormat[0]);
+    Gson gson = gsonBuilder.create();
+    gson.toJson(dateFormat);
 
     threadsTextView = findViewById(R.id.threads);
     ImageView plusImageView = findViewById(R.id.plus);
     ImageView minusImageView = findViewById(R.id.minus);
-    apiSwitchCompat = findViewById(R.id.api_info_switch);
     LinearLayout bottomSheetLayout = findViewById(R.id.bottom_sheet_layout);
     gestureLayout = findViewById(R.id.gesture_layout);
     sheetBehavior = BottomSheetBehavior.from(bottomSheetLayout);
@@ -158,9 +159,7 @@ public abstract class CameraActivity extends AppCompatActivity
     frameValueTextView = findViewById(R.id.frame_info);
     cropValueTextView = findViewById(R.id.crop_info);
     inferenceTimeTextView = findViewById(R.id.inference_info);
-
-    apiSwitchCompat.setOnCheckedChangeListener(this);
-
+    
     plusImageView.setOnClickListener(this);
     minusImageView.setOnClickListener(this);
   }
@@ -495,8 +494,6 @@ public abstract class CameraActivity extends AppCompatActivity
   @Override
   public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
     setUseNNAPI(isChecked);
-    if (isChecked) apiSwitchCompat.setText("NNAPI");
-    else apiSwitchCompat.setText("TFLITE");
   }
 
   @Override
