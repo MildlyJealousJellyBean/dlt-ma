@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_sheet_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -12,6 +13,7 @@
     app:behavior_hideable="true"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
+<!--    Up Arrow-->
     <LinearLayout
         android:id="@+id/gesture_layout"
         android:layout_width="match_parent"
@@ -29,6 +31,7 @@
 
     </LinearLayout>
 
+<!--    Frame Resolution-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Frame"
+            android:text="@string/frameText"
             android:textColor="@android:color/black" />
 
         <TextView
@@ -48,10 +51,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="right"
-            android:text="640*480"
-            android:textColor="@android:color/black" />
+            android:text="@string/frameText2"
+            android:textColor="@android:color/black"
+            tools:ignore="RtlHardcoded" />
     </LinearLayout>
 
+<!--    Cropped Resolution-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Crop"
+            android:text="@string/cropText"
             android:textColor="@android:color/black" />
 
         <TextView
@@ -71,12 +76,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="right"
-            android:text="640*480"
-            android:textColor="@android:color/black" />
+            android:text="@string/cropText2"
+            android:textColor="@android:color/black"
+            tools:ignore="RtlHardcoded" />
     </LinearLayout>
 
-
-
+<!--    Inference (Forward Prop) Time-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -87,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Inference Time"
+            android:text="@string/inferenceText"
             android:textColor="@android:color/black" />
 
         <TextView
@@ -96,10 +101,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="right"
-            android:text="640*480"
+            android:text="@string/inferenceText2"
             android:textColor="@android:color/black" />
     </LinearLayout>
 
+<!--    Thread Count Adjuster-->
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
@@ -116,23 +122,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Threads"
+            android:text="@string/threadText"
             android:textColor="@android:color/black" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:background="@drawable/rectangle"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="4dp">
+            android:padding="4dp"
+            tools:ignore="RelativeOverlap">
 
             <ImageView
                 android:id="@+id/minus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_remove" />
+                android:src="@drawable/ic_baseline_remove"
+                android:contentDescription="@string/removeThreadDescription" />
 
             <TextView
                 android:id="@+id/threads"
@@ -140,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="1"
+                android:text="@string/activeThreadCount"
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
 
@@ -148,7 +156,8 @@
                 android:id="@+id/plus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_add" />
+                android:src="@drawable/ic_baseline_add"
+                android:contentDescription="@string/addThreadDescription" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -157,30 +166,4 @@
         android:layout_height="1px"
         android:layout_marginTop="10dp"
         android:background="@android:color/darker_gray" />
-
-    <!-- TODO(b/112541284): Unhide when new NNAPI delegate is used. -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <TextView
-            android:id="@+id/api"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="API"
-            android:textColor="@android:color/black" />
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/api_info_switch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:checked="false"
-            android:gravity="right"
-            android:text="TFLITE"
-            android:textColor="@android:color/black" />
-    </LinearLayout>
 </LinearLayout>
